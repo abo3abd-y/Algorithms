@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts, amssymb, amsmath}
+\usepackage{float}
+\parindent 0px
+% we do not indent
+\pagestyle{empty}
+
+\begin{document}
+
+The distributive property states that $a(b+c) = ab + ac$, for all $a,b,c \in \mathbb{R}$\\[6pt]
+The equivalence class of $a$ is $[a]$.\\[6pt]
+The set $A$ is defined to be $\{1,2,3\}$\\[6pt]
+% if you want the curly brackets to show up, use \ before {} so \{ and \}
+The movie ticket costs $\$11.50$
+% same thing with dollar signs
+
+$$2\left(\frac{1}{x^2 - 1}\right)$$
+$$2\left[\frac{1}{x^2 - 1}\right]$$
+$$2\left\{     \frac{1}{x^2 - 1}\right\}$$
+$$2\left \langle     \frac{1}{x^2 - 1}      \right \rangle$$
+$$2\left |     \frac{1}{x^2 - 1}      \right |$$
+% as you can see, paranthesis looks trash because they dont fit to what is inside of them.
+% which is why you use \left( for the left one and \right) for the right one
+
+
+
+$$\left.\frac{dy}{dx}\right|_{x=1}$$
+% whats happening here? we only want the right, and not the left. But, in latex both have to be here. So, you can put a dot in the left so it does not appear.
+
+
+
+
+$$\left(\frac{1}{1+\left(\frac{1}{1 + x}\right)}\right)$$
+
+
+Tables:\\
+
+\begin{tabular}{|c||c|c|c|c|c|} % use c for centering and in here we are basically determining how many columns we'll have
+    % the vertical bar above is basically the line that seperates columns
+    \hline % this is just a line
+    $x$ & 1 & 2 & 3 & 4 & 5 \\ % use \\ to indicate that we are done with the first row
+    \hline
+    $f(x)$ & 10 & 11 & 12 & 13 & 14
+\end{tabular}
+
+
+\vspace{1cm}
+
+\begin{table}[H] % we are telling latex that we want the table in the same area as typing, not to the top of page
+\centering % centers the table with the caption
+\def\arraystretch{1.5} % this add spacing in the number and the line
+\begin{tabular}{|c||c|c|c|c|c|}
+    \hline
+    $x$ & 1 & 2 & 3 & 4 & 5 \\ % use \\ to indicate that we are done with the first row
+    \hline
+    $f(x)$ & $\frac{1}{2}$  & 11 & 12 & 13 & 14
+\end{tabular}
+\caption{These values represent the function $f(x)$}
+% we put a caption below the table
+\end{table}
+
+
+
+% you can do space in math mode by doing the following: \,
+
+Arrays:
+\begin{align} % align is already in math mode
+    5x^2-9=x+3\\
+    5x^2-x-12=0
+\end{align}
+
+% putting the &= means that the equal signs are aligned
+\begin{align*} % align is already in math mode
+    5x^2-9&=x+3\\
+    5x^2-x-12&=0\\
+    &=12+x-5x^2
+\end{align*}
+% the atrick removes the numbers
+
+
+
+
+
+
+\end{document}

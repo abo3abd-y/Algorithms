@@ -1,0 +1,68 @@
+\documentclass{article}
+\pagestyle{empty}
+% remove page number
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+superscripts $$2x^3$$
+$$2x^{34}$$ 
+% use {} if you are raising to multiple digits
+$$2x^{3x + 4}$$
+$$2x^{3x^4 + 5}$$
+
+subscripts
+$$x_1$$
+$$x_{12}$$
+% same thing with subscripts, use {} for mutltiple digits
+$$x_{1_2}$$
+$$x_{1_{2_{3}}}$$
+$$a_0,a_1,a_2,\ldots, a_{100}$$
+% this is how you do the dots, use \ldots
+
+Greek letters
+$$\pi$$
+$$\Pi$$
+$$\alpha$$
+$$A = \pi r^2$$
+% it's important to put the space after \pi to differentiate the command with your text
+
+Trig functions
+$$y = \sin (x)$$
+$$y=\cos (x)$$
+$$y=\csc (\theta)$$
+$$y=\sin^{-1} x$$
+$$y=\arcsin x$$
+
+Log functions
+$$y=\log x$$
+$$y=\log_5 x$$
+$$y=\ln x$$
+
+Roots
+$$\sqrt{2}$$
+$$\sqrt[10]{5}$$
+% as you can see, we are using the optional part to use the 10th square root
+$$\sqrt{x^2 + y^2}$$
+$$\sqrt{1 + \sqrt{x}}$$
+
+
+Fractions
+$$\frac{2}{3}$$
+About $\displaystyle \frac{23}{3}$ of the glass is full.\\[6pt]
+% as you can see, use [] for vertical space 
+About $\frac{23}{3}$ of the glass is full.
+% use \displaystyle when you want the same size as the big math mode
+About $\dfrac{2}{3}$ of the glass is full.
+% we had to download a package for this \dfrac{num}{den}
+
+$$\frac{\sqrt{x + 1}}{\sqrt{x + 2}}$$
+
+$$\frac{1}{        1 + \frac{1}{x}        }$$
+
+
+
+
+
+
+\end{document}
