@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage{enumerate}
+
+\begin{document}
+
+\begin{enumerate}
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+    \begin{enumerate}
+        \item notes
+        \item homework
+        \item assessments
+            \begin{enumerate}
+                \item tests
+                \item quizzes
+                \item journal entries
+            \end{enumerate}
+    \end{enumerate}
+    \item highlighters
+\end{enumerate}
+
+
+\begin{itemize}
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{itemize}
+
+\vspace{1cm}
+
+\begin{enumerate}[A.] % instead of numbering, we want capital letters
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{enumerate}
+
+
+\vspace{1cm}
+
+\begin{enumerate}[i.] % instead of numbering, we want capital letters
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{enumerate}
+
+
+\vspace{1cm}
+
+\begin{enumerate} \setcounter{enumi}{5} % now, we start at 6 and not one
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{itemize}
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+    \begin{itemize}
+        \item notes
+        \item homework
+        \item assessments
+            \begin{itemize}
+                \item tests
+                \item quizzes
+                \item journal entries
+            \end{itemize}
+    \end{itemize}
+    \item highlighters
+\end{itemize}
+
+\vspace{1cm}
+
+\begin{enumerate} % these []'s mean numbers wont show up
+    \item[a)] pencil % you can even put stuff inside instead of of the numbers
+    \item[] calculator
+    \item[] ruler
+    \item[] notebook
+\end{enumerate}
+
+
+\end{document}
