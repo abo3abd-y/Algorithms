@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+
+% ---------- Packages ----------
+\usepackage{geometry} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[breakable]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+% ---------- Page Setup ----------
+\geometry{margin=0.8in}
+\setlength{\parskip}{0.3em}
+\setlength{\parindent}{0pt}
+
+% ---------- Header & Footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Intro to Algorithms Notes}
+\lhead{Your Name}
+\cfoot{\thepage}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% ---------- Custom Environments ----------
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+
+\tcbset{exampleboxstyle/.style={ % Define a style for tcolorbox
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  title=Example,
+  breakable % The breakable key is here
+}}
+
+\newenvironment{examplebox}[1][]{ % Now define a standard newenvironment
+  \begin{tcolorbox}[exampleboxstyle,#1] % Apply the style and allow extra options
+}{
+  \end{tcolorbox}
+}
+
+% ---------- Title ----------
+\title{\textbf{Intro to Algorithms Notes}\\[1ex]\large Based on Cormen et al.}
+\author{Abdullah Yassine}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ---------- Chapter Example ----------
+\section{Chapter 1: The Role of Algorithms in Computing}
+
+\subsection{What is an Algorithm?}
+\begin{definition}
+An \textbf{algorithm} is a freaky well-defined computational procedure that takes some value or set of values as input and produces some value or set of values as output.
+\end{definition}
+
+\subsection{Algorithmic Efficiency}
+Discuss time complexity and growth of functions. which is great for thinking
+
+\subsubsection{Asymptotic Notation}
+\begin{itemize}
+  \item Big-O: $f(n) = O(g(n))$ means ...
+  \item $\Omega$, $\Theta$ also covered.
+\end{itemize}
+
+\subsection{Example Algorithm}
+\begin{algorithm}[H]
+\caption{Insertion Sort}
+\begin{algorithmic}
+\For{$j = 2$ to $A.length$}
+  \State $key = A[j]$
+  \State $i = j - 1$
+  \While{$i > 0$ and $A[i] > key$}
+    \State $A[i + 1] = A[i]$
+    \State $i = i - 1$
+  \EndWhile
+  \State $A[i + 1] = key$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{examplebox}
+Given the input array $[5, 2, 4, 6, 1, 3]$, Insertion Sort produces ... as
+\end{examplebox}
+
+\subsection{Key Takeaways}
+\begin{itemize}
+  \item Algorithms are not just code—they are general, logical procedures. again
+  \item Efficiency is crucial: compare brute-force vs. optimized versions. never do this again
+\end{itemize}
+
+\newpage
+\section{Chapter 2: Getting Started}
+% ... continue structure similarly
+
+\end{document}
