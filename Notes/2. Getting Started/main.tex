@@ -68,12 +68,47 @@
 \newpage
 
 % ---------- Chapter Example ----------
-\section{Chapter 1: The Role of Algorithms in Computing}
+\section{Chapter 2: Getting Started}
 
-\subsection{What is an Algorithm?}
+\subsection{Insertion Sort}
+We begin our studies by first learning the tools and frameworks we will be using in designing and analyzing algorithms. We do this by first describing and solving the \textbf{sorting problem}.
+
 \begin{definition}
-An \textbf{algorithm} is a well-defined computational procedure that takes some value or set of values as \textbf{input} and produces some value or set of values as \textbf{output}.
+    Sorting Problem
 \end{definition}
+\begin{examplebox}[title=Sorting Problem Definition]
+\textbf{input}: A sequence of $n$ numbers $\langle a_1,a_2,\ldots, a_n \rangle$ \\
+\textbf{output}: A permuation or reordering $\langle a'_1,a'_2, \dots,a'_n \rangle$ of the input sequence such that \mbox{$a'_1 \leq a'_2 \leq \ldots \leq a'_n $}
+\end{examplebox}
+
+
+\begin{definition}
+  The \textbf{keys} are the numbers that we wish to sort.
+\end{definition}
+
+The \textbf{pseodo-code} for the \textbf{insertion-sort} algorithmn is provided below. You can find the python implementation in the following path \texttt{./ch3.ipynb} of the current working directory.
+
+\begin{algorithm}[H]
+\caption{\textsc{Insertion-Sort}$(A)$}
+\begin{algorithmic}[1]
+\Require Array $A[1 \ldots n]$
+\Ensure Sorted array $A$ in non-decreasing order
+\For{$j = 2$ to $n$}
+  \State $key \gets A[j]$
+  \State $i \gets j - 1$
+  \While{$i > 0$ and $A[i] > key$}
+    \State $A[i + 1] \gets A[i]$ \Comment{Shift element right}
+    \State $i \gets i - 1$
+  \EndWhile
+  \State $A[i + 1] \gets key$ \Comment{Insert key in position}
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+You can see that the algorithm first assumes that the first index is sorted. It then takes the next index (just like how you would take the next card out of the cards you have) and sort it in the right place by placing the card in the appropriate place. It does this for all the cards.
+
+
+As you can see, the insertion-sort algorithm sorts the list \textbf{in-place}.
 
 \subsection{Algorithms as a Technology}
 
@@ -82,9 +117,7 @@ Different solutions to the same problem have different efficiencies in space use
 
 
 
-% \begin{examplebox}
-% Given the input array $[5, 2, 4, 6, 1, 3]$, Insertion Sort produces ... as
-% \end{examplebox}
+
 
 
 
