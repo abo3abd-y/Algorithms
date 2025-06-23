@@ -17,12 +17,15 @@
 \usepackage{booktabs}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{libertinus}
+
 
 
 % ---------- Page Setup ----------
 \geometry{margin=0.8in}
 \setlength{\parskip}{0.3em}
 \setlength{\parindent}{0pt}
+
 
 % ---------- Header & Footer ----------
 \pagestyle{fancy}
@@ -68,6 +71,7 @@
 \newpage
 
 % ---------- Chapter Example ----------
+\setcounter{section}{1}
 \section{Chapter 2: Getting Started}
 
 \subsection{Insertion Sort}
@@ -108,11 +112,51 @@ The \textbf{pseodo-code} for the \textbf{insertion-sort} algorithmn is provided 
 You can see that the algorithm first assumes that the first index is sorted. It then takes the next index (just like how you would take the next card out of the cards you have) and sort it in the right place by placing the card in the appropriate place. It does this for all the cards.
 
 
-As you can see, the insertion-sort algorithm sorts the list \textbf{in-place}.
+As you can see, the insertion-sort algorithm sorts the list \textbf{in-place}. \\
 
-\subsection{Algorithms as a Technology}
+So, how does this algorithm work? We start off by knowing that the subarray \texttt{A[1, j - 1]} is already sorted.\\
 
-Different solutions to the same problem have different efficiencies in space used and time spent solving the problem. We will learn more about these when we discuss sorting algorithms and how they all differ in terms of space and time complexity.
+Which means that now we have \texttt{j} that we need to sort which means that the subarray \mbox{\texttt{A[j + 1, n]}} is the one to yet be sorted.
+
+\subsection{Analyzing Algorithms}
+
+Before we start explaining how algorithms analyzed, we need to define a few things. First is the \textbf{input size} which is different from one problem to another. For example, in the case of sorting and more specifically \textsc{insertion-sort}, the input size is the size of the array we are dealing with. \\
+
+Another thing is \textbf{running time} which is the number of steps or operations executed. \\
+
+We won't go over analyzing \textsc{insertion-sort} here but we will define some terms though. First is the fact that \textbf{worst-case running time} means the \textit{longest} running time for any $n$. Sometimes we should be interested in \textbf{average-case}, but what constitutes "average" is limited. In this book, we can assume that any possiblity given an $n$ is equally possible. Sometimes, we can use \textbf{randomized algorithm} to randomize the input that the algorithm receives and yield an \textbf{expected} time out of that.\\
+
+Thus, for \textsc{insertion-sort}, for the worst-time, if we ignore lower-order terms and leading coefficients, we are left with $n^2$. Thus, \textsc{insertion-sort} has a worst-case running time of $\Theta (n^2)$.\\
+
+\textit{Generally}, we consider one algorithm to be better than the other if the worst-time is smaller than the other. For small inputs, however, sometimes the one with higher worst-time can outperform the one with the smaller worst-time. In a lot of cases, we assume we are using big input sizes.\\
+
+
+\newpage
+
+
+\subsection{Designing Algorithms}
+
+In this subsection, we will introduce \textbf{divide-and-conquer}.
+
+\subsubsection{The divide-and-conquer approach}
+
+We introduce \textbf{divide-and-conquer} which is the idea that we can divide a problem into smaller subproblems that have the same problem but it is in smaller size. We solve those problems and combine these solutions to solve the original problem \textbf{recursively}. \\
+
+The divide-and-conquer algorithm follows the following three steps:
+\begin{enumerate}
+  \item \textbf{Divide} the problem into smaller problems that are smaller instances of the same problem.
+  \item \textbf{Conquer} the subproblems by solving them recursively.
+  \item \textbf{Combine} the solutions to the subproblems into the solution for the original problem.
+\end{enumerate}
+
+The \textsc{\textbf{merge-sort}} algorithm follows this same approach, and works as follows:
+
+\begin{enumerate}
+  \item \textbf{Divide} the n-element sequence to be sorted into two subsequences of $n/2$ elements each.
+  \item \textbf{Conquer} by sorting the sub-sequences recursively using merge sort.
+  \item \textbf{Combine} by merging the two sorted subsequences to produce the sorted answer.
+\end{enumerate}
+
 
 
 
